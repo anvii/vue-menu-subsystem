@@ -1,0 +1,42 @@
+{
+  "name": "vue-menu-subsystem",
+  "description": "Vue3 SFC components for building menus, including drop-down menus and contextmenu",
+  "keywords": [
+    "menu",
+    "contextmenu",
+    "dropdown",
+    "vue3"
+  ],
+  "version": "0.9.1",
+  "author": "Andrey Solovyev <andrewsl@yandex.ru>",
+  "homepage": "https://anvii.github.io/menu/",
+  "type": "module",
+  "license": "MIT",
+  "main": "src/index.js",
+  "files": [
+    "README.md",
+    "src",
+    "dist"
+  ],
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "vue": "^3.5.22"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vuepress/bundler-vite": "^2.0.0-rc.26",
+    "@vuepress/theme-default": "^2.0.0-rc.118",
+    "sass-embedded": "^1.93.3",
+    "vite": "^7.1.11",
+    "vite-plugin-vue-devtools": "^8.0.3",
+    "vuepress": "^2.0.0-rc.26"
+  }
+}
