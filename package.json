@@ -7,8 +7,7 @@
     "dropdown",
     "vue3"
   ],
-  "version": "0.9.1",
-  "author": "Andrey Solovyev <andrewsl@yandex.ru>",
+  "version": "0.9.2",
   "homepage": "https://anvii.github.io/menu/",
   "type": "module",
   "license": "MIT",
