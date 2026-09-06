@@ -29,6 +29,23 @@
         </g-menu>
       </g-menu-item>
 
+      <g-menu-item label="By click" trigger="click">
+        <g-menu>
+          <g-menu-item label="New" />
+          <g-menu-item label="Open" />
+          <g-menu-item label="Open recent" trigger="click">
+            <g-menu>
+              <g-menu-item label="Project 1" />
+              <g-menu-item label="Project 2" />
+              <g-menu-item label="Project 3" />
+            </g-menu>
+          </g-menu-item>
+          <g-menu-item label="Save" />
+          <hr />
+          <g-menu-item label="Close (disabled)" disabled />
+        </g-menu>
+      </g-menu-item>
+
       <div style="flex-grow: 1;"></div>
       
       <g-menu-item label="Help">

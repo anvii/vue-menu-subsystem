@@ -1,5 +1,11 @@
 <template>
-  <li ref="item" class="g-menu-item" :class="{ disabled: disabled }" @click.stop="onClick">
+  <li
+    ref="item"
+    class="g-menu-item" :class="{ disabled: disabled, open: open, }"
+    @mouseover="onMouseOver"
+    @mouseleave="onMouseLeave"
+    @click.stop="onClick"
+  >
     <slot name="icon"></slot>
     <span v-if="label" class="label">{{ label }}</span>
     <slot />
@@ -27,9 +33,11 @@
   }
 
   // Children are always vertical
-  &:hover > ul.g-menu {
-    display: flex;
-    flex-direction: column;
+  &.open {
+    & > ul.g-menu {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   // Added caret right to parent item
@@ -78,6 +86,7 @@
 import { ref } from 'vue';
 
 const item = ref(null);
+const open = ref(false);
 
 const props = defineProps({
   label: {
@@ -92,15 +101,33 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  trigger: {
+    type: String,
+    default: 'hover',   // Available options: 'hover', 'click'
+  },
 });
 
 function onClick(e) {
   const parent = item.value?.closest('.g-menu');
-  const childMenu = item.value.querySelector('.g-menu');
-  if (parent && !props.keepMenu && !childMenu) {
+  const childMenu = item.value.querySelector('.g-menu') != null;
+
+  if (childMenu) {
+    if (props.trigger == 'click') {
+      open.value = !open.value;
+    }
+  }
+  else if (parent && !props.keepMenu) {
     parent.dispatchEvent(new Event('gclosemenu'));
   }
 }
 
+function onMouseOver(e) {
+  if (props.trigger == 'hover') {
+    open.value = true;
+  }
+}
 
+function onMouseLeave(e) {
+  open.value = false;
+}
 </script>

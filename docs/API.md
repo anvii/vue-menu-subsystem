@@ -8,6 +8,7 @@ The Menu Subsystem consists of four Vue components
 - label - Text label for menu item
 - disabled - Disabled item
 - keep-menu - Don't close menu when menu item is pressed
+- trigger - Open submenu by `hover` or by `click` events
 
 ### Slots
 - default - Placeholder for content next to label

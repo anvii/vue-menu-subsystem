@@ -13,13 +13,13 @@ See examples below
 
 <BasicMenu />
 
-@[code vue{3-16}](.vuepress/components/BasicMenu.vue)
+@[code vue{3-23}](.vuepress/components/BasicMenu.vue)
 
 ## Menu bar
 
 <MenuBar />
 
-@[code vue{3-40}](.vuepress/components/MenuBar.vue)
+@[code vue{3-57}](.vuepress/components/MenuBar.vue)
 
 ## Context menu
 
