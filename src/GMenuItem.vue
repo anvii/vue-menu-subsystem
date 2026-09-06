@@ -1,7 +1,7 @@
 <template>
   <li ref="item" class="g-menu-item" :class="{ disabled: disabled }" @click.stop="onClick">
     <slot name="icon"></slot>
-    <span class="label">{{ label }}</span>
+    <span v-if="label" class="label">{{ label }}</span>
     <slot />
   </li>
 </template>
