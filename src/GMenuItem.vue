@@ -96,7 +96,8 @@ const props = defineProps({
 
 function onClick(e) {
   const parent = item.value?.closest('.g-menu');
-  if (parent && !props.keepMenu) {
+  const childMenu = item.value.querySelector('.g-menu');
+  if (parent && !props.keepMenu && !childMenu) {
     parent.dispatchEvent(new Event('gclosemenu'));
   }
 }

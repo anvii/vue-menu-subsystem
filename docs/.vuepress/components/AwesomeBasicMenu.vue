@@ -1,12 +1,12 @@
 <template>
   <div class="showbox">
     <g-menu>
-      <g-menu-item label="New">
+      <g-menu-item label="New" keep-menu>
         <template #icon>
           <i class="fas fa-file"></i>
         </template>
       </g-menu-item>
-      <g-menu-item label="Open">
+      <g-menu-item label="Open" keep-menu>
         <template #icon>
           <i class="fas fa-folder-open"></i>
         </template>
@@ -21,7 +21,7 @@
           <g-menu-item label="Project 3" />
         </g-menu>
       </g-menu-item>
-      <g-menu-item label="Save">
+      <g-menu-item label="Save" keep-menu>
         <template #icon>
           <i class="fas fa-save"></i>
         </template>
